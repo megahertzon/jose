@@ -385,7 +385,7 @@ abstract class JoseObjectBuilder<T extends JoseObject> {
   /// that use different keys. The compact serialization as a string can only
   /// have one recipient however.
   void addRecipient(JsonWebKey? key, {String? algorithm}) {
-    recipients.add({'_jwk': key, 'alg': algorithm});
+    recipients.add({'alg': algorithm,'_jwk': key});
   }
 
   /// Build the [JsonWebSignature] or [JsonWebEncryption]
